@@ -23,7 +23,7 @@ class Brand extends Model
     {
         static::deleting(function ($brand) {
             if ($brand->cars()->exists()) {
-                throw new \Exception('Related goals found');
+                throw new \Exception('Related cars found');
             }
         });
     }
